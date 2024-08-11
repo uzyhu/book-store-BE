@@ -9,7 +9,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "http://localhost:3001", // The frontend URL
+    origin: "http://localhost:3000", // The frontend URL
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })

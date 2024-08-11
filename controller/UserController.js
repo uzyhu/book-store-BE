@@ -62,7 +62,7 @@ const login = (req, res) => {
                 });
                 console.log(token);
 
-                return res.status(StatusCodes.OK).json(results);
+                return res.status(StatusCodes.OK).json({...results[0], token: token});
             } else {
                 return res.status(StatusCodes.UNAUTHORIZED).end(); //401 : Unauthorized,403 : Forbidden (접근 권리 없음, 그사람이 누군지 알고 있다)
             }
